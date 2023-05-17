@@ -13,6 +13,7 @@ after_success:
   - docker build -t dkapanadze/multi-nginx ./nginx
   - docker build -t dkapanadze/multi-server ./server
   - docker build -t dkapanadze/multi-worker ./worker
+
   #login into docker hub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push dkapanadze/multi-client
